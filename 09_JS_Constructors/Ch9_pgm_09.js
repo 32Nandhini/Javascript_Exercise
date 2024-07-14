@@ -178,7 +178,65 @@ var spacer = {
   
   player1.showInfo("=");
   
+  var Player = function (name, health) {
+    var newLine = spacer.newLine();
   
+    this.name = name;
+    this.health = health;
+    this.items = [];
+    this.place = null;
+  
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
+
+    this.dropItem = function () {
+        return this.items.pop();
+    };
+  
+    this.getNameInfo = function () {
+        return this.name;
+    };
+  
+    this.getHealthInfo = function () {
+        return this.name + " has health " + this.health;
+    };
+  
+    this.getPlaceInfo = function () {
+        return this.name + " is in " + this.place.title;
+    };
+  
+    this.getItemsInfo = function () {
+        var itemsString = "Items:" + newLine;
+        this.items.forEach(function (item, i) {
+            itemsString += "   - " + item + newLine;
+        });
+        return itemsString;
+    };
+  
+    this.getInfo = function (character) {
+        var place = this.getPlaceInfo();
+        var health = this.getHealthInfo();
+        var longest = Math.max(place.length, health.length) + 4;
+  
+        var info = spacer.box(this.getNameInfo(), longest, character);
+        info += spacer.wrap(place, longest, character);
+        info += spacer.newLine() + spacer.wrap(health, longest, character);
+        info += newLine + spacer.line(longest, character);
+  
+        info += newLine;
+        info += "  " + this.getItemsInfo();
+        info += newLine;
+        info += spacer.line(longest, character);
+        info += newLine;
+  
+        return info;
+    };
+  
+    this.showInfo = function (character) {
+        console.log(this.getInfo(character));
+    };
+};
   
   /* Further Adventures
    *
