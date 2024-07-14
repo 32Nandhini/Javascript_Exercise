@@ -28,6 +28,22 @@ planets.forEach(function (planet) {
 });
 
 
+var planet2 = buildPlanet(
+    "Mars",
+    4,
+    "Terrestrial"
+);
+
+
+planet2.showPlanet(); 
+
+var planet3 = buildPlanet(
+    "Earth",
+    3,
+    "Living Planet"
+);
+planet3.showPlanet(); 
+
 
 /* Further Adventures
  *
