@@ -26,8 +26,45 @@ question1.addOption("Bordeaux");
 question1.addOption("F");
 question1.addOption("Paris");
 question1.addOption("Brussels");
-
+question1.addOption("K");
 question1.showQuestion();
+
+// Create the first question
+var question1 = new QuizQuestion(
+    "What is the capital of France?",
+    "Paris"
+);
+
+question1.addOption("Bordeaux");
+question1.addOption("F");
+question1.addOption("Paris");
+question1.addOption("Brussels");
+question1.addOption("K");
+question1.showQuestion();
+
+// Create the second question
+var question2 = new QuizQuestion(
+    "Which planet is known as the Red Planet?",
+    "Mars"
+);
+
+question2.addOption("Earth");
+question2.addOption("Mars");
+question2.addOption("Jupiter");
+question2.addOption("Saturn");
+question2.showQuestion();
+
+// Create the third question
+var question3 = new QuizQuestion(
+    "Who wrote 'To Kill a Mockingbird'?",
+    "Harper Lee"
+);
+
+question3.addOption("Harper Lee");
+question3.addOption("J.K. Rowling");
+question3.addOption("Mark Twain");
+question3.addOption("Ernest Hemingway");
+question3.showQuestion();
 
 
 
