@@ -1,5 +1,5 @@
 // Higher or Lower
-
+/*
 var getGuesser = function () {
     var secret = Math.floor(Math.random() * 10 + 1);
   
@@ -17,7 +17,24 @@ var getGuesser = function () {
   };
   
   var guess = getGuesser();
-  
+  */
+ 
+ //answers
+ var getGuesser = function () {
+  var secret = Math.floor(Math.random() * 10 + 1);
+
+  return function (userNumber) {
+    if (userNumber > secret) {
+      return "Too high!";
+    } else if (userNumber === secret) {
+      return "Well done!";
+    } else {
+      return "Too low!";
+    }
+  };
+};
+
+var guess = getGuesser();
   
   
   /* Further Adventures
