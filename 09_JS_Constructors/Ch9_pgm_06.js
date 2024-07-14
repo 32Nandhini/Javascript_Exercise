@@ -28,7 +28,10 @@ var planet3 = new Planet("Mercury", 1, "Terrestrial");
     planet.showPlanet();
 });
 
-
+console.log(planet1.getMoon(1)); 
+console.log(planet2.getMoon(0)); 
+console.log(planet3.getMoon(0)); 
+console.log(planet1.getMoon(3)); 
 
 /* Further Adventures
  *
