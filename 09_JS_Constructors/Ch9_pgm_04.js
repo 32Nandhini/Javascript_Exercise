@@ -16,6 +16,10 @@ var planet = new Planet( "Jupiter", 5, "Gas Giant" );
 
 planet.showPlanet();
 
+// Create the second planet
+var planet2 = new Planet("Mars", 4, "Terrestrial");
+
+planet2.showPlanet(); 
 
 
 /* Further Adventures
