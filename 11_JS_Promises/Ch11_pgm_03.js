@@ -28,7 +28,7 @@ const doPromise = new Promise((resolve, reject) => {
 // Promise constructor
 const doPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    const skills = ['HTML', 'CSS', 'JS'];
+    const skills = ['HTML', 'CSS', 'JS','Bootstrap'];
 
     // Simulating a condition (here, the array must have some skills)
     if (skills.length > 0) {
