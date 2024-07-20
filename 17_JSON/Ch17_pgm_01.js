@@ -103,9 +103,39 @@ const txt = `{
         "points": 40
     }
 }
-`
 
+//answers
+const skillsJSON = JSON.stringify(skills);
+console.log(skillsJSON); // Output: '["HTML","CSS","JS","React","Node","Python"]'
 
+const ageJSON = JSON.stringify(age);
+console.log(ageJSON); // Output: '250'
+
+const isMarriedJSON = JSON.stringify(isMarried);
+console.log(isMarriedJSON); // Output: 'true'
+
+const studentJSON = JSON.stringify(student);
+console.log(studentJSON); // Output: '{"firstName":"Asabeneh","lastName":"Yetayehe","age":250,"isMarried":true,"skills":["HTML","CSS","JS","React","Node","Python"]}'
+
+// Level 2
+const studentFilteredJSON = JSON.stringify(student, ['firstName', 'lastName', 'skills']);
+console.log(studentFilteredJSON); // Output: '{"firstName":"Asabeneh","lastName":"Yetayehe","skills":["HTML","CSS","JS","React","Node","Python"]}'
+
+// Level 3
+const studentsObj = JSON.parse(txt);
+console.log(studentsObj);
+
+let maxSkills = 0;
+let userWithMostSkills = '';
+
+for (const user in studentsObj) {
+    if (studentsObj[user].skills.length > maxSkills) {
+        maxSkills = studentsObj[user].skills.length;
+        userWithMostSkills = user;
+    }
+}
+
+console.log(userWithMostSkills); // Output: 'Asab'
 // Level 1
 
 // 1. Change skills array to JSON using JSON.stringify()
